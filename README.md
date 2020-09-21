@@ -5,9 +5,9 @@ The aim of the project is to create an Ansible module in python language.
 I'm planning to create and maybe implement an iptables file created with data in a JSON file
 
 My sheduled steps are :
-1) Create an Ansible role to push one iptables rule on a server
-2) Code a script in python invoking the basic Ansible role previously created
-3) Update the python script to load the JSON file and apply the Ansible role for each data
+1) Create an Ansible playbook to push one iptables rule on a server
+2) Code a script in python invoking the basic playbook previously created
+3) Update the python script to load the JSON file and apply the playbook for each data
 4) Create the Ansible module invoking the python script
 
 Future updates if enough time left
