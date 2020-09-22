@@ -17,11 +17,9 @@ Future updates if enough time left
 Usage :
 
 Stage 1 : 	by now, the playbook will add a rule to allow access on the specified port as a client
-			the only option available will additionnally, before adding the rule :
-				- add a rule to allow access from SSH on the server
-				- set DROP as default to the chains INPUT, OUTPUT and FORWARD
-				- flush all the chains
-	
-	ansible-playbook -i inventory_file --become --ask-become-pass -e "<options> port=number"
+			the playbook will run on all hosts in group "netfilter"
+			
+	ansible-playbook -i inventory_file --become --ask-become-pass -e "<options>"
 		
-		options :	init=True	used to clear the table
+		options :	init=True		used to clear the table and set a rule to allow SSH access
+					port=<number>	specified port for the new rule, no rule created if ommited

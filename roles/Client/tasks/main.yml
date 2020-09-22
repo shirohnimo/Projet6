@@ -1,6 +1,6 @@
 ---
 # tasks file for Client
-- name: SendPacket
+- name: Add rule for OUTPUT chain
   iptables:
     chain: OUTPUT
     ctstate: [NEW, ESTABLISHED]
@@ -9,7 +9,7 @@
     source_port: 
     jump: ACCEPT
 
-- name: ReceivePacket
+- name: Add rule for INPUT chain
   iptables:
     chain: INPUT
     ctstate: ESTABLISHED
