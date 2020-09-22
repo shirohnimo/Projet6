@@ -1,0 +1,3 @@
+---
+# defaults file for Client
+portSSH: "22"

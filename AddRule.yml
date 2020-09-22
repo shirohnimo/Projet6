@@ -1,0 +1,31 @@
+---
+- name: Clear
+  hosts: server1
+  gather_facts: no
+  roles:
+    - role: "ClearTable"
+      when: init|default(False)|bool
+
+- name: AddSSH
+  hosts: server1
+  gather_facts: no
+  roles:
+    - role: "Server"
+      vars:
+        added_port: "{{ portSSH }}"
+      when: init|default(False)|bool
+
+- name: Drop
+  hosts: server1
+  gather_facts: no
+  roles:
+    - role: "DropDefault"
+      when: init|default(False)|bool
+
+- name: AddRule
+  hosts: server1
+  gather_facts: no
+  roles:
+    - role: "Client"
+      vars:
+        added_port: "{{ port }}"

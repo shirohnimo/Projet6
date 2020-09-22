@@ -1,0 +1,16 @@
+---
+# Reset to defaults the chains INPUT, OUTPUT and FORWARD
+
+- name: Reset default to ACCEPT
+  iptables:
+    chain: "{{ item }}"
+    policy: ACCEPT
+  become: yes
+  with_items:  [ 'INPUT', 'FORWARD', 'OUTPUT' ]
+  
+- name: Flush the chains
+  iptables:
+    chain: "{{ item }}"
+    flush: yes
+  become: yes
+  with_items:  [ 'INPUT', 'FORWARD', 'OUTPUT' ]

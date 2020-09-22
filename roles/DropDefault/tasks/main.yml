@@ -1,0 +1,10 @@
+---
+# Set DROP as default for chains INPUT, OUTPUT and FORWARD
+
+- name: Set DROP as default for all chains
+  iptables:
+    chain: "{{ item }}"
+    policy: DROP
+  become: yes
+  with_items:  [ 'INPUT', 'FORWARD', 'OUTPUT' ]
+  
