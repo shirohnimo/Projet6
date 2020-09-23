@@ -1,0 +1,19 @@
+---
+# tasks file for Client
+- name: Add rule for OUTPUT chain
+  iptables:
+    chain: OUTPUT
+    ctstate: [NEW, ESTABLISHED]
+    protocol: tcp
+    destination_port: "{{ added_port }}"
+    source_port: 
+    jump: ACCEPT
+
+- name: Add rule for INPUT chain
+  iptables:
+    chain: INPUT
+    ctstate: ESTABLISHED
+    protocol: tcp
+    source_port: "{{ added_port }}"
+    destination_port:
+    jump: ACCEPT

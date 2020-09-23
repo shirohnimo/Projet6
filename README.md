@@ -13,3 +13,14 @@ My sheduled steps are :
 Future updates if enough time left
 * python script to manage/update the JSON file
 * update the script to apply the new content with the Ansible module
+
+Usage :
+
+Stage 1 : 	by now, the playbook will add a rule to allow access on the specified port as a client
+			the playbook will run on all hosts in group "netfilter"
+			
+	ansible-playbook -i inventory_file --become --ask-become-pass -e "<options>"
+		
+		options :	init=True		used to clear the table and set a rule to allow SSH access
+					port=<number>	specified port for the new rule, no rule created if ommited
+					mode=server		the specified port will be unlocked as a service
