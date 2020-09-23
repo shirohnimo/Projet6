@@ -23,3 +23,4 @@ Stage 1 : 	by now, the playbook will add a rule to allow access on the specified
 		
 		options :	init=True		used to clear the table and set a rule to allow SSH access
 					port=<number>	specified port for the new rule, no rule created if ommited
+					mode=server		the specified port will be unlocked as a service

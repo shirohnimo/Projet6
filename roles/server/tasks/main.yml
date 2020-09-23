@@ -1,17 +1,17 @@
 ---
 # tasks file for Client
-- name: SendPacket
+- name: Add rule for OUTPUT chain
   iptables:
     chain: OUTPUT
     ctstate: ESTABLISHED
     protocol: tcp
-    source_port: 22
+    source_port: "{{ added_port }}"
     jump: ACCEPT
 
-- name: ReceivePacket
+- name: Add rule for INPUT chain
   iptables:
     chain: INPUT
     ctstate: [NEW,ESTABLISHED]
     protocol: tcp
-    destination_port: 22
+    destination_port: "{{ added_port }}"
     jump: ACCEPT
