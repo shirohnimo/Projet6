@@ -1,0 +1,9 @@
+BECOME password: 
+[0;31mERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:[0m
+[0;31mJSON: Expecting value: line 1 column 9 (char 8)[0m
+[0;31m[0m
+[0;31mSyntax Error while loading YAML.[0m
+[0;31m  expected ',' or '}', but got '['[0m
+[0;31m[0m
+[0;31mThe error appears to be in '<string>': line 1, column 41, but may[0m
+[0;31mbe elsewhere in the file depending on the exact syntax problem.[0m

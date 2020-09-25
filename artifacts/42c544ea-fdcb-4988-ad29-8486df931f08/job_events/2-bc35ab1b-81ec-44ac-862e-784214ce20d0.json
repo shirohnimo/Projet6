@@ -1,0 +1,1 @@
+{"event": "verbose", "uuid": "bc35ab1b-81ec-44ac-862e-784214ce20d0", "counter": 2, "stdout": "\u001b[0;31mERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:\u001b[0m", "start_line": 1, "end_line": 2, "runner_ident": "42c544ea-fdcb-4988-ad29-8486df931f08"}

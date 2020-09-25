@@ -1,0 +1,10 @@
+
+PLAY [Clean the netfilter table] ***********************************************
+
+TASK [ClearTable : Reset default to ACCEPT] ************************************
+[0;31mfatal: [server1]: FAILED! => {"msg": "Missing sudo password"}[0m
+[0;31mserver1[0m                    : ok=0    changed=0    unreachable=0    [0;31mfailed=1   [0m skipped=0    rescued=0    ignored=0   
+
+PLAY RECAP *********************************************************************
+[0;31mserver1[0m                    : ok=0    changed=0    unreachable=0    [0;31mfailed=1   [0m skipped=0    rescued=0    ignored=0   
+

@@ -1,0 +1,1 @@
+{"event": "verbose", "uuid": "b328bcd1-ec77-4d06-9569-5b075ac335d5", "counter": 8, "stdout": "\u001b[0;31mThe error appears to be in '<string>': line 1, column 41, but may\u001b[0m", "start_line": 7, "end_line": 8, "runner_ident": "a94bfa0c-7219-43c7-8114-b3b29c21a92a"}
