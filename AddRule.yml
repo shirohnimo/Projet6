@@ -1,13 +1,13 @@
 ---
 - name: Clean the netfilter table
-  hosts: netfilter
+  hosts: "{{ target }}"
   gather_facts: no
   roles:
     - role: "ClearTable"
       when: init|default(False)|bool
 
 - name: Add rule to allow SSH access
-  hosts: netfilter
+  hosts: "{{ target }}"
   gather_facts: no
   roles:
     - role: "server"
@@ -16,14 +16,14 @@
       when: init|default(False)|bool
 
 - name: Set DROP as default rule
-  hosts: netfilter
+  hosts: "{{ target }}"
   gather_facts: no
   roles:
     - role: "DropDefault"
       when: init|default(False)|bool
 
 - name: Add new rule for specified port
-  hosts: netfilter
+  hosts: "{{ target }}"
   gather_facts: no
   vars:
     mode: "client"

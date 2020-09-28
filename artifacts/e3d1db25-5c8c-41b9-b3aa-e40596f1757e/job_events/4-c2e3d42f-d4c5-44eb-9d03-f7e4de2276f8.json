@@ -1,0 +1,1 @@
+{"event": "verbose", "uuid": "c2e3d42f-d4c5-44eb-9d03-f7e4de2276f8", "counter": 4, "stdout": "\u001b[0;31mThe error appears to be in '/home/user-ansible/Projet6/AddRule.yml': line 31, column 7, but may\u001b[0m", "start_line": 3, "end_line": 4, "runner_ident": "e3d1db25-5c8c-41b9-b3aa-e40596f1757e"}

@@ -1,0 +1,45 @@
+BECOME password: 
+[1;35m[WARNING]: Found variable using reserved name: port[0m
+
+PLAY [Clean the netfilter table] ***********************************************
+
+TASK [ClearTable : Reset default to ACCEPT] ************************************
+[0;33mchanged: [server1] => (item=INPUT)[0m
+[0;33mchanged: [server1] => (item=FORWARD)[0m
+[0;33mchanged: [server1] => (item=OUTPUT)[0m
+
+TASK [ClearTable : Flush the chains] *******************************************
+[0;33mchanged: [server1] => (item=INPUT)[0m
+[0;33mchanged: [server1] => (item=FORWARD)[0m
+[0;33mchanged: [server1] => (item=OUTPUT)[0m
+
+PLAY [Add rule to allow SSH access] ********************************************
+
+TASK [server : Add rule for OUTPUT chain] **************************************
+[1;35m[WARNING]: The value 22 (type int) in a string field was converted to '22'[0m
+[1;35m(type string). If this does not look like what you expect, quote the entire[0m
+[1;35mvalue to ensure it does not change.[0m
+[0;33mchanged: [server1][0m
+
+TASK [server : Add rule for INPUT chain] ***************************************
+[0;33mchanged: [server1][0m
+
+PLAY [Set DROP as default rule] ************************************************
+
+TASK [DropDefault : Set DROP as default for all chains] ************************
+[0;33mchanged: [server1] => (item=INPUT)[0m
+[0;33mchanged: [server1] => (item=FORWARD)[0m
+[0;33mchanged: [server1] => (item=OUTPUT)[0m
+
+PLAY [Add new rule for specified port] *****************************************
+
+TASK [client : Add rule for OUTPUT chain] **************************************
+[0;33mchanged: [server1][0m
+
+TASK [client : Add rule for INPUT chain] ***************************************
+[0;33mchanged: [server1][0m
+[0;33mserver1[0m                    : [0;32mok=7   [0m [0;33mchanged=7   [0m unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+PLAY RECAP *********************************************************************
+[0;33mserver1[0m                    : [0;32mok=7   [0m [0;33mchanged=7   [0m unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+

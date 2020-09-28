@@ -1,0 +1,1 @@
+{"event": "verbose", "uuid": "5b80e54b-3418-42fb-8703-eaa0a0412915", "counter": 17, "stdout": "\u001b[0;31m      - {{ foo }}\u001b[0m", "start_line": 16, "end_line": 17, "runner_ident": "263acadd-4402-4af1-828b-8c389d8b7e54"}

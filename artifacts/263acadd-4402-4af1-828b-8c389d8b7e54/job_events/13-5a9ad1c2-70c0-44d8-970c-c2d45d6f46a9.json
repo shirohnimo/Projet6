@@ -1,0 +1,1 @@
+{"event": "verbose", "uuid": "5a9ad1c2-70c0-44d8-970c-c2d45d6f46a9", "counter": 13, "stdout": "\u001b[0;31mmissing quotes. Always quote template expression brackets when they\u001b[0m", "start_line": 12, "end_line": 13, "runner_ident": "263acadd-4402-4af1-828b-8c389d8b7e54"}
