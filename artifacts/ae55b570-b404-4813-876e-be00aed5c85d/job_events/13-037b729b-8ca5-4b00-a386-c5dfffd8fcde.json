@@ -1,1 +1,0 @@
-{"event": "verbose", "uuid": "037b729b-8ca5-4b00-a386-c5dfffd8fcde", "counter": 13, "stdout": "\u001b[0;31m- name: Clean the netfilter table\u001b[0m", "start_line": 12, "end_line": 13, "runner_ident": "ae55b570-b404-4813-876e-be00aed5c85d"}

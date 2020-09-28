@@ -1,1 +1,0 @@
-{"event": "verbose", "uuid": "5ad3ef95-93da-4bd0-84ab-11f77d1f3df6", "counter": 2, "stdout": "\u001b[0;31mERROR! the role '8' was not found in /home/user-ansible/Projet6/roles:/home/user-ansible/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:/home/user-ansible/Projet6\u001b[0m", "start_line": 1, "end_line": 2, "runner_ident": "e3d1db25-5c8c-41b9-b3aa-e40596f1757e"}

@@ -1,1 +1,0 @@
-{"event": "verbose", "uuid": "8e32d0c5-4aad-4913-b8d6-344a59355a88", "counter": 6, "stdout": "\u001b[0;31m  expected ',' or '}', but got '['\u001b[0m", "start_line": 5, "end_line": 6, "runner_ident": "a94bfa0c-7219-43c7-8114-b3b29c21a92a"}
