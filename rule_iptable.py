@@ -7,14 +7,14 @@ import json
 
 # Variables
 work_dir = '/home/user-ansible/Projet6'		# Working Directory
-data_file = 'data.json'						# File containing ports list to filter
+data_file = 'env/data.json'					# File containing ports list to filter
 pb_file = 'AddRule.yml'						# Name of the playbook file
 inv_file = 'inventaire.ini'					# Ansible inventory file
 become_pass = 'passforce'					# Become password for Ansible user
 
 # Arguments used in command line :
 parser = argparse.ArgumentParser()
-parser.add_argument("port", nargs='?', type=int, help="Port number to open in netfilter")
+parser.add_argument("port", nargs='?', type=int, help="Port number to open in netfilter, content of env/data.json used if omitted")
 parser.add_argument("-s", "--server", action="store_true", help="Specifies to open the port in server mode")
 parser.add_argument("-d", "--destination", type=str, help="Name of the destination server")
 parser.add_argument("-i", "--init", action="store_true", help="Clear netfilter tables")
