@@ -16,8 +16,8 @@ Future updates if enough time left
 
 Usage :
 
-Stage 1 : 	the playbook will add a rule to allow communication on the specified port as a client
-		the playbook will run on all hosts in group "netfilter" if no target defined in options
+Stage 1 : 	The playbook will add a rule to allow communication on the specified port as a client
+		The playbook will run on all hosts in group "netfilter" if no target defined in options
 			
 	ansible-playbook -i inventory_file --become --ask-become-pass -e "<options>" AddRule.yml
 		
@@ -27,8 +27,8 @@ Stage 1 : 	the playbook will add a rule to allow communication on the specified 
 				target=<server>		host targetted by the playbook (must be in inventory file)
 
 Stage 2 & 3 :
-		the python script uses the AddRule Ansible playbook to create netfiler rules
-		the script apply the playbook for every port in a JSON file (env/data.json)
+		The python script uses the AddRule Ansible playbook to create netfiler rules
+		The script apply the playbook for every port in a JSON file (env/data.json)
 
 	usage: rule_iptable.py [-h] [-s] [-d DESTINATION] [-i] [port]
 
@@ -40,3 +40,7 @@ Stage 2 & 3 :
   		-s, --server					Specifies to open the port in server mode
   		-d DESTINATION, --destination DESTINATION	Name of the destination server
   		-i, --init        				Clear netfilter tables
+
+Stage 4 :
+		The purpose of this final stage is to implement the python script in a new Ansible playbook.
+		This new playbook will allow the creation of netfilter rules, one at a time or using a JSON file, and then save these rules to make them persistent.
