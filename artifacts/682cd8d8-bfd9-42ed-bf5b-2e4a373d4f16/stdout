@@ -1,0 +1,42 @@
+BECOME password: 
+[1;35m[WARNING]: Found variable using reserved name: port[0m
+
+PLAY [Clean the netfilter table] ***********************************************
+
+TASK [ClearTable : Reset default to ACCEPT] ************************************
+[0;36mskipping: [server1] => (item=INPUT) [0m
+[0;36mskipping: [server1] => (item=FORWARD) [0m
+[0;36mskipping: [server1] => (item=OUTPUT) [0m
+
+TASK [ClearTable : Flush the chains] *******************************************
+[0;36mskipping: [server1] => (item=INPUT) [0m
+[0;36mskipping: [server1] => (item=FORWARD) [0m
+[0;36mskipping: [server1] => (item=OUTPUT) [0m
+
+PLAY [Add rule to allow SSH access] ********************************************
+
+TASK [server : Add rule for OUTPUT chain] **************************************
+[0;36mskipping: [server1][0m
+
+TASK [server : Add rule for INPUT chain] ***************************************
+[0;36mskipping: [server1][0m
+
+PLAY [Set DROP as default rule] ************************************************
+
+TASK [DropDefault : Set DROP as default for all chains] ************************
+[0;36mskipping: [server1] => (item=INPUT) [0m
+[0;36mskipping: [server1] => (item=FORWARD) [0m
+[0;36mskipping: [server1] => (item=OUTPUT) [0m
+
+PLAY [Add new rule for specified port] *****************************************
+
+TASK [server : Add rule for OUTPUT chain] **************************************
+[0;32mok: [server1][0m
+
+TASK [server : Add rule for INPUT chain] ***************************************
+[0;32mok: [server1][0m
+[0;32mserver1[0m                    : [0;32mok=2   [0m changed=0    unreachable=0    failed=0    [0;36mskipped=5   [0m rescued=0    ignored=0   
+
+PLAY RECAP *********************************************************************
+[0;32mserver1[0m                    : [0;32mok=2   [0m changed=0    unreachable=0    failed=0    [0;36mskipped=5   [0m rescued=0    ignored=0   
+

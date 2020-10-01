@@ -1,0 +1,4 @@
+---
+# tasks file for SaveNetfilter
+- name: Backup netfilter rules
+  shell: iptables-save > {{ rules_file | default('/etc/iptables/rules.v4') }}

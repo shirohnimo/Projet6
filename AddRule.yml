@@ -13,7 +13,7 @@
   roles:
     - role: "server"
       vars:
-        added_port: 22
+        added_port: "22"
       when: init|default(False)|bool
 
 - name: Set DROP as default rule
@@ -30,4 +30,5 @@
     - role: "{{ mode | default('client') }}"
       vars:
         added_port: "{{ port }}"
+        added_protocol: "{{ protocol | default('tcp') }}"
       when: port is defined
