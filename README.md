@@ -23,6 +23,7 @@ Stage 1 : 	The playbook will add a rule to allow communication on the specified 
 		
 		options :	init=True		used to clear the table and set a rule to allow SSH access
 				port=<number>		specified port for the new rule, no rule created if ommited
+				protocol=udp		change protocol to UDP (TCP if ommited)
 				mode=server		the specified port will be unlocked as a service (mode client if omitted)
 				target=<server>		host targetted by the playbook (must be in inventory file)
 
@@ -30,14 +31,15 @@ Stage 2 & 3 :
 		The python script uses the AddRule Ansible playbook to create netfiler rules
 		The script apply the playbook for every port in a JSON file (env/data.json)
 
-	usage: rule_iptable.py [-h] [-s] [-d DESTINATION] [-i] [port]
+	usage: rule_iptable.py [-h] [-u] [-s] [-d DESTINATION] [-i] [port]
 
 	positional arguments:
-  		port                				Port number to open in netfilter, content of env/data.json used if omitted
+  		port                  Port number to open in netfilter, content of env/data.json used if omitted
 
 	optional arguments:
-  		-h, --help 					show this help message and exit
-  		-s, --server					Specifies to open the port in server mode
+  		-h, --help            				Show this help message and exit
+  		-u, --udp          				Specifies to open the port in UDP protocol (by default TCP is used)
+  		-s, --server     				Specifies to open the port in server mode
   		-d DESTINATION, --destination DESTINATION	Name of the destination server
   		-i, --init        				Clear netfilter tables
 

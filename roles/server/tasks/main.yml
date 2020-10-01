@@ -4,7 +4,7 @@
   iptables:
     chain: OUTPUT
     ctstate: ESTABLISHED
-    protocol: tcp
+    protocol: "{{ added_protocol | default('tcp') }}"
     source_port: "{{ added_port }}"
     jump: ACCEPT
 
@@ -12,6 +12,6 @@
   iptables:
     chain: INPUT
     ctstate: [NEW,ESTABLISHED]
-    protocol: tcp
+    protocol: "{{ added_protocol | default('tcp') }}"
     destination_port: "{{ added_port }}"
     jump: ACCEPT

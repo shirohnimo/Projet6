@@ -1,0 +1,20 @@
+---
+
+- name: Installation of package iptables-persistent
+  hosts: "{{ target | default('netfilter') }}"
+  gather_facts: no
+  roles:
+    - role: "install_persistent"
+
+# Save previous rules
+- name: Backup actual rules
+  hosts: "{{ target | default('netfilter') }}"
+  gather_facts: no
+  roles:
+    - role: "SaveNetfilter"
+      vars:
+        rules_file: '/etc/iptables/rules.sav'
+
+# Creation of rules
+
+# Save rules

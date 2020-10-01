@@ -1,0 +1,7 @@
+---
+# tasks file for install_persistent
+- name: "Install package"
+  apt:
+    name: iptables-persistent
+    update_cache: yes
+    state: present
