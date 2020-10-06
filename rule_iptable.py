@@ -57,7 +57,7 @@ def RunPlaybook(port, protocol, mode, init, target):
 		quiet=True
 		)
 
-# Launch the playbook for each port in data_file
+# Launch the playbook for each port specified in data_file
 def ApplyFromFile():
 	data = ReadData(data_file)
 	rules_order = data[0]
@@ -71,11 +71,13 @@ def ApplyFromFile():
 
 # Launch the playbook with values entered as arguments
 def ApplyFromCLI():
+	# Setting protocol to udp if option given, to tcp if not
 	if args.udp:
 		protocol = 'udp'
 	else:
 		protocol = 'tcp'
 
+	# Setting mode to server if option given, to client if not
 	if args.server:
 		mode = 'server'
 	else:
@@ -83,7 +85,7 @@ def ApplyFromCLI():
 
 	RunPlaybook(args.port, protocol, mode, args.init, args.destination)
 
-# If port specified as argument, apply for this port
+# If port is specified as argument, apply for this port
 if args.port:
 	ApplyFromCLI()
 # otherwise, apply for each port in data file
