@@ -8,7 +8,6 @@ My sheduled steps are :
 1) Create an Ansible playbook to push one iptables rule on a server
 2) Code a script in python invoking the basic playbook previously created
 3) Update the python script to load the JSON file and apply the playbook for each data
-4) Create the Ansible module invoking the python script
 
 Future updates if enough time left
 * python script to manage/update the JSON file
